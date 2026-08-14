@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perplexity Clone - AI Search Engine</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <button class="new-chat-btn" id="newChatBtn">
+          <i class="fas fa-plus"></i>
+          New Chat
+        </button>
+      </div>
+      
+      <div class="chat-history">
+        <h3>Recent Chats</h3>
+        <div class="history-list" id="historyList">
+          <!-- Chat history items will be added here -->
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-btn" id="settingsBtn">
+          <i class="fas fa-cog"></i>
+          Settings
+        </button>
+        <button class="sidebar-btn" id="helpBtn">
+          <i class="fas fa-question-circle"></i>
+          Help
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Chat Messages Area -->
+      <div class="chat-container" id="chatContainer">
+        <!-- Messages will be added here -->
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+        <!-- Focus Mode Selector -->
+        <div class="focus-modes">
+          <button class="focus-btn active" data-mode="web">
+            <i class="fas fa-globe"></i>
+            <span>Web</span>
+          </button>
+          <button class="focus-btn" data-mode="academic">
+            <i class="fas fa-book"></i>
+            <span>Academic</span>
+          </button>
+          <button class="focus-btn" data-mode="reddit">
+            <i class="fab fa-reddit"></i>
+            <span>Reddit</span>
+          </button>
+          <button class="focus-btn" data-mode="youtube">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </button>
+          <button class="focus-btn" data-mode="video">
+            <i class="fas fa-video"></i>
+            <span>Video</span>
+          </button>
+          <button class="focus-btn" data-mode="writing">
+            <i class="fas fa-pen"></i>
+            <span>Writing</span>
+          </button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="search-box">
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Ask me anything..."
+            autocomplete="off"
+          >
+          <button class="search-btn" id="searchBtn">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+
+        <p class="disclaimer">
+          Perplexity Clone can make mistakes. Consider checking important information.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal" id="settingsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Settings</h2>
+        <button class="close-btn" id="closeSettingsBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="setting-item">
+          <label for="apiKeyInput">API Configuration:</label>
+          <p class="setting-desc">Configure your API keys in the .env file</p>
+        </div>
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="darkModeToggle" checked>
+            Dark Mode
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div class="spinner" id="spinner">
+    <div class="spinner-ring"></div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
